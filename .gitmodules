@@ -3,4 +3,4 @@
 	url = https://github.com/flathub/shared-modules.git
 [submodule "yafc-ce"]
 	path = yafc-ce
-	url = git@github.com:Yafc-CE/yafc-ce.git
+	url = https://github.com/Yafc-CE/yafc-ce.git
