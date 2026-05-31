@@ -1,18 +1,16 @@
 ## Requirements
 Need to install flatpak-builder. Easiest is to grab it from Flathub.
 
-`flatpak install org.flatpak.Builder`
+```
+flatpak install org.flatpak.Builder
+```
 
 ## Update and build
 Based on this guide: <https://docs.flatpak.org/en/latest/dotnet.html>
 
-- Update the submodules
+- Update the submodules with `git submodule update --remote --merge`
 
-`git submodule update --remote --merge`
-
-- Checkout the new YAFC-CE version by doing
-
-`git checkout tags/VERSION` in the repo
+- Checkout the new YAFC-CE version by doing `git checkout tags/VERSION` in the repo
 
 - Update the metadata in the .xml and .yaml file to point to the new release
 
@@ -23,6 +21,7 @@ python3 flatpak-dotnet-generator.py --dotnet 8 --freedesktop 25.08 nuget-sources
 ```
 
 - To build the flatpak, run: 
-
-`flatpak run org.flatpak.Builder build-dir --user --force-clean --install --repo=repo io.github.YafcCE.yafc-ce.yaml`
+```
+flatpak run org.flatpak.Builder build-dir --user --force-clean --install --repo=repo io.github.YafcCE.yafc-ce.yaml
+```
 
