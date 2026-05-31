@@ -1,8 +1,10 @@
 ## Requirements
-Need to install flatpak-builder. Easiest is to grab it from Flathub.
+Need to install flatpak-builder. Easiest is to grab it from Flathub. You will
+also need to install any build depencies for this project.
 
 ```
 flatpak install org.flatpak.Builder
+flatpak run org.flatpak.Builder build-dir --user --install-deps-from=flathub --download-only io.github.YafcCE.yafc-ce.yaml
 ```
 
 ## Update and build
@@ -16,7 +18,6 @@ Based on this guide: <https://docs.flatpak.org/en/latest/dotnet.html>
 
 - To generate the nuget-sources.json file, run the following 
 ```
-flatpak run org.flatpak.Builder build-dir --user --install-deps-from=flathub --download-only io.github.YafcCE.yafc-ce.yaml
 python3 flatpak-dotnet-generator.py --dotnet 8 --freedesktop 25.08 nuget-sources.json yafc-ce/Yafc/Yafc.csproj
 ```
 
