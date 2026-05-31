@@ -1,6 +1,6 @@
 app-id: io.github.YafcCE.yafc-ce
 runtime: org.freedesktop.Platform
-runtime-version: '25.08'
+runtime-version: "25.08"
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.dotnet8
@@ -34,6 +34,7 @@ modules:
       - type: git
         url: "https://github.com/Yafc-CE/yafc-ce.git"
         tag: "v2.18.1"
+        path: yafc-ce
       - ./nuget-sources.json
     build-commands:
       - mkdir -p ${FLATPAK_DEST}/bin
