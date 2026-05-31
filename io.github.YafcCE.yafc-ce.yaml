@@ -37,7 +37,7 @@ modules:
       - ./nuget-sources.json
     build-commands:
       - mkdir -p ${FLATPAK_DEST}/bin
-      - dotnet publish Yafc/Yafc.csproj -r linux-x64 -c Release --no-self-contained --source ./nuget-sources -o ${FLATPAK_DEST}/bin
+      - dotnet publish Yafc/Yafc.csproj -r linux-x64 -c Release --source ./nuget-sources -o ${FLATPAK_DEST}/bin
 
   - name: yafc-ce-install
     buildsystem: simple
