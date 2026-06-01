@@ -33,7 +33,7 @@ modules:
     sources:
       - type: git
         url: "https://github.com/Yafc-CE/yafc-ce.git"
-        tag: "v2.18.1"
+        tag: "v2.19.0"
         path: yafc-ce
       - ./nuget-sources.json
     build-commands:
